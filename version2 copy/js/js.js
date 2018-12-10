@@ -37,6 +37,6 @@ window.onload = function() {
     function search(){
       var location = document.getElementById("form-search").value;
       console.log('Search executed');
-      alert('Thank you for submitting your search for Brunch in'+location+'. This functionality will be added soon.');
+      alert('Thank you for submitting your search for Brunch in '+location+'. This functionality will be added soon.');
       return 'Search executed';
     }
