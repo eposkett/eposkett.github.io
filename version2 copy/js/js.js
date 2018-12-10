@@ -18,41 +18,27 @@ window.onload = function() {
     if(TwentyFourHour < 12) {
        mid = 'am';
     }
-  document.getElementById('currentTime').innerHTML = hour+':'+min + mid ;
-    setTimeout(clock, 1000);
+    if (document.getElementById('currentTime') !== null) {
+      document.getElementById('currentTime').innerHTML = hour+':'+min + mid ;
+        setTimeout(clock, 1000);
+        }
     }
 }
-var latlngPos = new google.maps.LatLng(51.507393, -0.127700);
-
-var myOptions = {
-   zoom: 10,
-   center: latlngPos,
-   mapTypeId: google.maps.MapTypeId.ROADMAP
-};
-
-var map = new google.maps.Map(document.getElementById("map"), myOptions);
-var markerPos = new google.maps.LatLng(51.507393, -0.127700);
 
 
-var marker = new google.maps.Marker({
-   position: markerPos,
-   map: map,
-   title: "PC Pro Offices"
-});
-
-var contactbutton = document.getElementById('contactbutton')
-
-var searchbutton = document.getElementById('searchbutton')
-
-contactbutton.addEventListener('click',
-  function(){console.log('Contact form submitted');
-        alert('Thank you for submitting your message. We will be in touch soon.');
-        return 'Contact form submitted';
-  }, false);
 
 
-searchbutton.addEventListener('click',
-  function(){console.log('Search executed');
-        alert('Thank you for submitting your search. This functionality will be added soon.');
-        return 'Search executed';
-  }, false);
+
+    function contact(){
+      var hello = document.getElementById("form-name").value;
+      console.log('Contact form submitted');
+      console.log(document.getElementById('contactform'))
+      alert('Thank you for submitting your message, '+ hello +'. We will be in touch soon.');
+      return 'Contact form submitted';
+    }
+
+    function search(){
+      console.log('Search executed');
+      alert('Thank you for submitting your search. This functionality will be added soon.');
+      return 'Search executed';
+    }
