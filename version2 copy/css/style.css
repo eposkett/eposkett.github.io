@@ -114,7 +114,7 @@ p span {
   height: 130px;
   position: fixed;
   margin-top: 30px;
-  z-index: 50;
+  z-index: 1;
 }
 #nav {
   width: 410px;
