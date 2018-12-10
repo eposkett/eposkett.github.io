@@ -26,9 +26,6 @@ window.onload = function() {
 }
 
 
-
-
-
     function contact(){
       var hello = document.getElementById("form-name").value;
       console.log('Contact form submitted');
@@ -38,7 +35,8 @@ window.onload = function() {
     }
 
     function search(){
+      var location = document.getElementById("form-search").value;
       console.log('Search executed');
-      alert('Thank you for submitting your search. This functionality will be added soon.');
+      alert('Thank you for submitting your search for Brunch in'+location+'. This functionality will be added soon.');
       return 'Search executed';
     }
