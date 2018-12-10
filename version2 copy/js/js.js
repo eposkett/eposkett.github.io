@@ -39,3 +39,20 @@ var marker = new google.maps.Marker({
    map: map,
    title: "PC Pro Offices"
 });
+
+var contactbutton = document.getElementById('contactbutton')
+
+var searchbutton = document.getElementById('searchbutton')
+
+contactbutton.addEventListener('click',
+  function(){console.log('Contact form submitted');
+        alert('Thank you for submitting your message. We will be in touch soon.');
+        return 'Contact form submitted';
+  }, false);
+
+
+searchbutton.addEventListener('click',
+  function(){console.log('Search executed');
+        alert('Thank you for submitting your search. This functionality will be added soon.');
+        return 'Search executed';
+  }, false);
